@@ -68,3 +68,30 @@ if args.task == 'GraphTask':
 **Kindly note that the comparison takes the same pre-trained pth.The absolute value of performance won't mean much because the final results may vary depending on different
   pre-training states.It would be more interesting to see the relative performance with other training paradigms.**
 
+## Dataset
+
+Our experiments are conducted on a diverse set of datasets, covering both node classification and graph classification tasks:
+
+### Node Classification Datasets
+
+| Dataset       | Description                                                                                                                       | Task                                  |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| **Cora, CiteSeer, and PubMed** | Citation networks where nodes represent documents, and edges represent citation links. Each node has a feature vector from the document text. | Classify nodes into academic topics.  |
+| **Flickr**    | Social network dataset where nodes represent users, and edges represent follower relationships. Node features are based on user activity and metadata. | Classify users into interest groups.  |
+| **ogbn-arxiv**| Citation network of computer science papers from arXiv, part of the Open Graph Benchmark. Nodes represent papers with feature vectors based on content. | Predict the subject area of each paper.|
+
+### Graph Classification Datasets
+
+| Dataset       | Description                                                                                                                       | Task                                  |
+|---------------|-----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------|
+| **PROTEINS**  | Graphs representing proteins, with nodes as secondary structure elements and edges as spatial or sequential proximities.           | Classify proteins into categories.    |
+| **COX2**      | Molecular graphs where nodes are atoms and edges are chemical bonds.                                                              | Predict the biological activity of molecules. |
+| **ENZYMES**   | Graphs of enzyme structures.                                                                                                      | Predict the enzyme commission number. |
+| **BZR**       | Molecular graphs.                                                                                                                 | Classify molecules based on biochemical properties. |
+| **MUTAG**     | Graphs of mutagenic compounds, with nodes as atoms and edges as bonds.                                                            | Classify compounds by mutagenicity.   |
+| **DD**        | Graphs representing protein structures, with nodes as amino acids and edges as interactions.                                      | Categorize proteins into structural families. |
+| **COLLAB**    | Scientific collaboration graphs, with nodes as researchers and edges as co-authorships.                                           | Classify ego-networks into research fields. |
+
+These datasets provide a comprehensive evaluation of our methods across various types of graphs and classification tasks, ensuring robustness and generalizability of the results.
+
+
